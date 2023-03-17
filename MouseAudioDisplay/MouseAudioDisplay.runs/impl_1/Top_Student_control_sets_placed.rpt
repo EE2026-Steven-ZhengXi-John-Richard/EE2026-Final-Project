@@ -1,0 +1,89 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Mar 17 18:10:55 2023
+| Host         : stevenasus running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    23 |
+| Unused register locations in slices containing registers |    86 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |           12 |
+|     12 |            1 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              68 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             278 |           36 |
+| Yes          | No                    | No                     |              42 |            7 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              46 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+--------------------------------+---------------------------+------------------+----------------+
+|       Clock Signal       |          Enable Signal         |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++--------------------------+--------------------------------+---------------------------+------------------+----------------+
+|  ac/CLK                  |                                | plf/SS[0]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[0]                 | plf/SS[1]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[3]                 | plf/SS[4]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[4]                 | plf/SS[5]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[2]                 | plf/SS[3]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[6]                 | plf/SS[7]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[1]                 | plf/SS[2]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[9]                 | plf/SS[10]                |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[7]                 | plf/SS[8]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[8]                 | plf/SS[9]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[5]                 | plf/SS[6]                 |                1 |              2 |
+|  ac/CLK                  | plf/p_0_out[10]                | plf/SS[11]                |                1 |              2 |
+|  basys_clock_IBUF_BUFG   |                                |                           |                6 |             12 |
+|  clk_samp_OBUF_BUFG      | plf/E[0]                       |                           |                3 |             18 |
+| ~u_Audio_Input/sclk_OBUF |                                |                           |                4 |             24 |
+|  clk_samp_OBUF_BUFG      | apv/clear                      |                           |                4 |             24 |
+|  clk_samp_OBUF_BUFG      | apv/peak_value_reg[11]_i_2_n_2 | apv/clear                 |                2 |             24 |
+|  basys_clock_IBUF_BUFG   |                                | clk_samp_OBUF_BUFG        |                3 |             24 |
+|  clk_samp_OBUF_BUFG      |                                |                           |                4 |             32 |
+|  basys_clock_IBUF_BUFG   |                                | c10/count[31]_i_1_n_0     |                8 |             62 |
+|  basys_clock_IBUF_BUFG   |                                | cg/count[31]_i_1_n_0      |                8 |             62 |
+|  clk_samp_OBUF_BUFG      |                                | apv/clear                 |                8 |             64 |
+|  clk_samp_OBUF_BUFG      |                                | u_A_7S_Out/count_reg[0]_0 |                8 |             64 |
++--------------------------+--------------------------------+---------------------------+------------------+----------------+
+
+
